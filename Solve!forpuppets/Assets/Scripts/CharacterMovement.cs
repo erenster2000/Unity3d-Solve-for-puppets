@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-
     public float speed;
     public float rotationSpeed;
+
+    private CharacterController characterController;
+
+    void Start()
+    {
+        characterController = GetComponent<CharacterController>();
+    }
 
     void Update()
     {
@@ -22,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
         float magnitude = Mathf.Clamp01(move.magnitude) * speed;
         move.Normalize();
 
-        transform.Translate(move * magnitude * Time.deltaTime, Space.World);
+        characterController.SimpleMove(move * magnitude);
 
         if(move != Vector3.zero)
         {
@@ -31,4 +37,6 @@ public class CharacterMovement : MonoBehaviour
         }
 
     }
+        
+    
 }
