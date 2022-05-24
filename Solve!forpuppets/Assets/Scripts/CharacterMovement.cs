@@ -7,10 +7,13 @@ public class CharacterMovement : MonoBehaviour
     public float speed;
     public float rotationSpeed;
 
+    private Animator animator;
+
     private CharacterController characterController;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
     }
 
@@ -32,8 +35,13 @@ public class CharacterMovement : MonoBehaviour
 
         if(move != Vector3.zero)
         {
+            animator.SetBool("isMoving", true);
             Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
 
     }
