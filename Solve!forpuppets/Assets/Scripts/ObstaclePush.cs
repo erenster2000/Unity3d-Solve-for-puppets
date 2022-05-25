@@ -6,6 +6,7 @@ public class ObstaclePush : MonoBehaviour
 {
     [SerializeField]
     private float forceMagnitude;
+    //private Animator animator;
     // Start is called before the first frame update
 
     private void OnControllerColliderHit(ControllerColliderHit hit) 
@@ -14,6 +15,7 @@ public class ObstaclePush : MonoBehaviour
 
         if(rigidbody != null)
         {
+            //animator.SetBool("pushing", true);         
             Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
             forceDirection.y = 0;
             forceDirection.Normalize();

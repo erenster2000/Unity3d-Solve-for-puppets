@@ -45,6 +45,22 @@ public class CharacterMovement : MonoBehaviour
         }
 
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+
+        if(hit.gameObject.tag == "box")
+        {
+            animator.SetBool("pushing", true);
+            return;
+        }
+        else
+        {
+            animator.SetBool("pushing", false);
+            return;
+        }
+
+    }
         
     
 }
