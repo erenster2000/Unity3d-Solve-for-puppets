@@ -15,7 +15,8 @@ public class ObstaclePush : MonoBehaviour
 
         if(rigidbody != null)
         {
-            //animator.SetBool("pushing", true);         
+            Debug.Log("ccc");
+                 
             Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
             forceDirection.y = 0;
             forceDirection.Normalize();
