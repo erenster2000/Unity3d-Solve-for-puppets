@@ -14,9 +14,7 @@ public class ObstaclePush : MonoBehaviour
         Rigidbody rigidbody = hit.collider.attachedRigidbody;
 
         if(rigidbody != null)
-        {
-            Debug.Log("ccc");
-                 
+        {                 
             Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
             forceDirection.y = 0;
             forceDirection.Normalize();

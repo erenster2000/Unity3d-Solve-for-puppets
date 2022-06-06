@@ -11,6 +11,10 @@ public class CharacterMovement : MonoBehaviour
 
     private CharacterController characterController;
 
+    private bool freezeRot = false;
+    private bool dnm1 = false;
+    private bool dnm2 = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -36,8 +40,11 @@ public class CharacterMovement : MonoBehaviour
         if(move != Vector3.zero)
         {
             animator.SetBool("isMoving", true);
+            if(!freezeRot)
+            {
             Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            }
         }
         else
         {
@@ -52,15 +59,21 @@ public class CharacterMovement : MonoBehaviour
         if(hit.gameObject.tag == "MovableObject")
         {
             animator.SetBool("pushing", true);
+            freezeRot = true;
+            //hit.transform.parent = transform;
         }
-           
-        //else
-        //{
-        //    animator.SetBool("pushing", false);
-            
-        //}
+
 
     }
+
+    void OnTriggerEnter(Collider other)
+     {
+         if(other.gameObject.tag == "box")
+        {
+            animator.SetBool("pushing", false);
+            freezeRot = false;
+        }
+     }
         
     
 }
