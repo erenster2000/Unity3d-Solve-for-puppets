@@ -8,6 +8,8 @@ TagManager:
   - box
   - ground
   - Detector
+  - Portal01
+  - AirCheck
   layers:
   - Default
   - TransparentFX

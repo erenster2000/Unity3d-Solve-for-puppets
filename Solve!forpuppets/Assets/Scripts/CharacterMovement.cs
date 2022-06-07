@@ -12,8 +12,6 @@ public class CharacterMovement : MonoBehaviour
     private CharacterController characterController;
 
     private bool freezeRot = false;
-    private bool dnm1 = false;
-    private bool dnm2 = false;
 
     void Start()
     {
@@ -24,6 +22,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         Move();
+        
     }
 
     private void Move()
@@ -73,7 +72,9 @@ public class CharacterMovement : MonoBehaviour
             animator.SetBool("pushing", false);
             freezeRot = false;
         }
+
      }
-        
+
+
     
 }
