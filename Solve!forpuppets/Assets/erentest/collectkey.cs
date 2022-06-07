@@ -23,7 +23,7 @@ public class collectkey : MonoBehaviour
         {
         scoresystem.theScore += 1;
         gameObject.SetActive(false);
-        if(scoresystem.theScore == 2)
+        if(scoresystem.theScore == 1)
         {
         otherAnimator.SetBool("DoorOpen", true);
         }
