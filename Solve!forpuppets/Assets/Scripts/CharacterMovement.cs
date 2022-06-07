@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
 
     private CharacterController characterController;
 
-    private bool freezeRot = false;
+    public static bool freezeRot = false;
 
     void Start()
     {
@@ -57,6 +57,7 @@ public class CharacterMovement : MonoBehaviour
 
         if(hit.gameObject.tag == "MovableObject")
         {
+            //hit.transform.parent = gameObject.transform;
             animator.SetBool("pushing", true);
             freezeRot = true;
             //hit.transform.parent = transform;

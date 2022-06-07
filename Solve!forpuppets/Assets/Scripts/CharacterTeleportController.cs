@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CharacterTeleportController : MonoBehaviour
 {
     [SerializeField]
     public GameObject portal01;
-    private Animator animator;
+    public GameObject otherObject;
+    Animator otherAnimator;
     // Start is called before the first frame update
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        otherAnimator = otherObject.GetComponent<Animator>();
     }
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Portal01")
         {
             transform.position = new Vector3(-4, 6, 1);
-            animator.SetBool("pushing", false);
+            otherAnimator.SetBool("pushing", false);
+            CharacterMovement.freezeRot = false;
 
         }
         

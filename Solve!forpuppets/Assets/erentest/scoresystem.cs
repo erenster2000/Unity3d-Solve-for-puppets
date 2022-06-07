@@ -12,7 +12,7 @@ public class scoresystem : MonoBehaviour
     {
     
        
-        scoreText.GetComponent<Text>().text = " SCORE: " + theScore;
+        scoreText.GetComponent<Text>().text = " Keys " + theScore +"/2";
     
     }
 
