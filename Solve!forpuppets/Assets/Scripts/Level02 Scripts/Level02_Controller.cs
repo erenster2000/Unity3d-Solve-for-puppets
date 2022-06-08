@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level02_Controller : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class Level02_Controller : MonoBehaviour
         {
             otherAnimator.SetBool("DoorOpen", true);
             CounterBool = false;
+        }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
         }
         
     }
