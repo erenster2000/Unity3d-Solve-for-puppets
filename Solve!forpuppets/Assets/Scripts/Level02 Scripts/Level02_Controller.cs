@@ -10,6 +10,8 @@ public class Level02_Controller : MonoBehaviour
 
     public GameObject Door;
     Animator otherAnimator;
+    
+    
     void Start()
     {
        otherAnimator = Door.GetComponent<Animator>(); 
@@ -25,8 +27,18 @@ public class Level02_Controller : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.R))
         {
+            Lcounter = 0;
             SceneManager.LoadScene(1);
         }
         
     }
+public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == ("Player"))
+        {
+        SceneManager.LoadScene(2);
+        }
+
+    }
+
 }
