@@ -9,7 +9,8 @@ TagManager:
   - ground
   - Detector
   - Portal01
-  - AirCheck
+  - Portal02
+  - Portal03
   layers:
   - Default
   - TransparentFX
