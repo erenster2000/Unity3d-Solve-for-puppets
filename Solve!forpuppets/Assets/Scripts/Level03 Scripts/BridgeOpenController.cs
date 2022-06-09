@@ -5,7 +5,7 @@ using UnityEngine;
 public class BridgeOpenController : MonoBehaviour
 {
     [SerializeField]
-    GameObject placedGem, Bridge;
+    GameObject placedGem, Bridge, Collider;
 
     Animator otherAnimator;
     void Start()
@@ -21,9 +21,10 @@ public class BridgeOpenController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player"  && GemCollect.gemCollected == true)
+        if(other.gameObject.tag == "Player" && GemCollect.gemCollected == true)
         {        
             placedGem.SetActive(true); 
+            Collider.SetActive(false);
             otherAnimator.SetBool("BridgeOpen", true);       
         }
         

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level03_Controller : MonoBehaviour
 {
     [SerializeField]
-    GameObject orangeB, purpleB, greenB, Door, solve3;
+    GameObject orangeB, purpleB, greenB, BlackB, Door, solve3;
 
     public static int Lcounter = 0;
 
@@ -27,25 +27,26 @@ public class Level03_Controller : MonoBehaviour
     {
         if(PlateTriggerYellowforOrange.yellow == true && PlateTriggerRedforOrange.red == true)
         {
-            Debug.Log("sdaf");
+            orangeB.gameObject.SetActive(false);
 
         }
 
         if(PlateTriggerBlueforPurple.blue == true && PlateTriggerRedforPurple.red == true)
         {
-            Debug.Log("sdaf");
+            purpleB.gameObject.SetActive(false);;
 
         }
 
         if(PlateTriggerBlueforGreen.blue == true && PlateTriggerYellowforGreen.yellow == true)
         {
-            Debug.Log("sdaf");
+            greenB.gameObject.SetActive(false);
 
         }
 
         if(Lcounter == 3)
         {
-            Debug.Log("BlackBox");
+            //Debug.Log("BlackBox");
+            BlackB.gameObject.SetActive(false);
             otherAnimator.SetBool("DoorOpen", true);
         }
     }

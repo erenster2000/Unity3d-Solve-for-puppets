@@ -8,20 +8,10 @@ public class LevelEnder : MonoBehaviour
     
     void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.tag == "MovableObject")
+        if(other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Level_02");
         }
-        
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
