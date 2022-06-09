@@ -8,13 +8,20 @@ public class Level02_Controller : MonoBehaviour
     public static int Lcounter;
     private bool CounterBool = true;
 
-    public GameObject Door;
+    public GameObject Door, solve2;
     Animator otherAnimator;
     
     
     void Start()
     {
        otherAnimator = Door.GetComponent<Animator>(); 
+       StartCoroutine(aea());
+    }
+
+    IEnumerator aea()
+    {
+        yield return new WaitForSeconds(5);
+        solve2.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
