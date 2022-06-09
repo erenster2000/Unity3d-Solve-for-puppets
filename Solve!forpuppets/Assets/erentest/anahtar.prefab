@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8567595838355052120}
   - component: {fileID: 5837439501660873362}
   - component: {fileID: 5099013683606066297}
-  - component: {fileID: 5099013683606066296}
   m_Layer: 0
   m_Name: anahtar
   m_TagString: Untagged
@@ -96,15 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.04127124, y: 0.09605032, z: 0.0223066}
   m_Center: {x: 0.0000000022556597, y: 0.02097181, z: -0.00015494105}
---- !u!114 &5099013683606066296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5332891138246034247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e7e0aa58f43924183b140f87d0fe80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

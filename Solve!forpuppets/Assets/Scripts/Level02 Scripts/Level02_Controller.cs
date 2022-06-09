@@ -36,7 +36,7 @@ public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == ("Player"))
         {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         }
 
     }
