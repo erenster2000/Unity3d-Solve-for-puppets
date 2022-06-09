@@ -11729,7 +11729,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7824458769397529155, guid: f8891260f19be1440866662ddd34e9e2, type: 3}
       propertyPath: forceMagnitude
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7824458769397670418, guid: f8891260f19be1440866662ddd34e9e2, type: 3}
       propertyPath: m_Name
