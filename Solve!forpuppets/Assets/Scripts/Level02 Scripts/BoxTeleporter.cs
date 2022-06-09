@@ -17,21 +17,21 @@ public class BoxTeleporter : MonoBehaviour
     {
         if(other.gameObject.tag == "Portal01")
         {
-            transform.position = new Vector3(-7.60f, 4.5f, -15.85f);
+            transform.position = new Vector3(-7.65f, 4.5f, -15.90f);
             otherAnimator.SetBool("pushing", false);
             CharacterMovement.freezeRot = false;
 
         }
         if(other.gameObject.tag == "Portal02")
         {
-            transform.position = new Vector3(-5.5f, 4.5f, -13.93f);
+            transform.position = new Vector3(-5.55f, 4.5f, -13.98f);
             otherAnimator.SetBool("pushing", false);
             CharacterMovement.freezeRot = false;
 
         }
         if(other.gameObject.tag == "Portal03")
         {
-            transform.position = new Vector3(-3, 4.5f, -12.29f);
+            transform.position = new Vector3(-3.5f, 4.5f, -12.34f);
             otherAnimator.SetBool("pushing", false);
             CharacterMovement.freezeRot = false;
 

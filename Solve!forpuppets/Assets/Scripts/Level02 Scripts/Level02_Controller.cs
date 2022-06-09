@@ -35,7 +35,7 @@ public class Level02_Controller : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             Lcounter = 0;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
         
     }
