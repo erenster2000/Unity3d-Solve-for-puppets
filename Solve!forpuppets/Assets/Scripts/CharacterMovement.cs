@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
+    public Joystick joystick;
 
     private Animator animator;
 
@@ -27,8 +28,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Move()
     {
-        float horizontalMove = Input.GetAxis("Horizontal");
-        float verticalMove = Input.GetAxis("Vertical");
+        float horizontalMove = joystick.Horizontal;
+        float verticalMove = joystick.Vertical;
 
         Vector3 move = new Vector3(horizontalMove, 0, verticalMove);
         float magnitude = Mathf.Clamp01(move.magnitude) * speed;
