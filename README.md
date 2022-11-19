@@ -1,2 +1,2 @@
 # Solve-for-puppets
-Puzzle game project, by Unity
+A puzzle game project Made in Unity for homework.
